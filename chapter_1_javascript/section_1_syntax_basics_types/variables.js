@@ -1,4 +1,4 @@
-console.log("TOPIC: VARIABLES")
+console.log("\nTOPIC: VARIABLES")
 
 // 1. Const Variables
 const earthToMoonDistance = 384400
