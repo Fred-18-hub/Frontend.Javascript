@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1",
+        "task": "Learn javascript",
+        "completed": false
+    },
+    {
+        "id": "2",
+        "task": "Create a todo app",
+        "completed": true
+    }
+]
