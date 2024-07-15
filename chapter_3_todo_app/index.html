@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+
+<body>
+    <div class="container"> <!-- Main div for to do app-->
+        <div class="time-container"> <!-- Div for time part of app -->
+            <img src="./assets/images/balls_light_glass_neon.jpg" alt="Balls-image">
+            <div id="date-time">
+                <h4></h4>
+                <h2></h2>
+            </div>
+        </div>
+
+        <div class="tasks-container"> <!-- Div for tasks part of app -->
+            <dialog id="form-dialog"></dialog>
+
+            <button id="create-task" class="green-btn">Create Task</button>
+
+            <div id="tasks"></div>
+        </div>
+
+        <div class="success-msg-div"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/variables.js"></script>
+    <script src="./assets/js/update-time.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
