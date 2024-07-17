@@ -68,12 +68,15 @@ const outputList = new ListTemplate(ulElement);
 form.addEventListener("submit", (e: Event) => {
     e.preventDefault();
 
+    let values: [string, string, number];
+    values = [toFromInput.value, detailsInput.value, amountInput.valueAsNumber];
+
     let doc: HasFormatter;
     if (typeInput.value === "invoice") {
-        doc = new Invoice(toFromInput.value, detailsInput.value, amountInput.valueAsNumber);
+        doc = new Invoice(...values);
     }
     else {
-        doc = new Payment(toFromInput.value, detailsInput.value, amountInput.valueAsNumber);
+        doc = new Payment(...values);
     }
 
     outputList.render(doc, typeInput.value, "end");
