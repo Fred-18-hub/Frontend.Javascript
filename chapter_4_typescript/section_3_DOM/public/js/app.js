@@ -45,12 +45,14 @@ const ulElement = document.querySelector("ul");
 const outputList = new ListTemplate(ulElement);
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    let values;
+    values = [toFromInput.value, detailsInput.value, amountInput.valueAsNumber];
     let doc;
     if (typeInput.value === "invoice") {
-        doc = new Invoice(toFromInput.value, detailsInput.value, amountInput.valueAsNumber);
+        doc = new Invoice(...values);
     }
     else {
-        doc = new Payment(toFromInput.value, detailsInput.value, amountInput.valueAsNumber);
+        doc = new Payment(...values);
     }
     outputList.render(doc, typeInput.value, "end");
 });
