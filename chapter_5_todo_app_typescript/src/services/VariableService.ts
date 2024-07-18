@@ -21,6 +21,7 @@ export const dateTime = document.getElementById("date-time") as HTMLDivElement;
 export const formDialog = document.getElementById("form-dialog") as HTMLDialogElement;
 export const createTaskBtn = document.getElementById("create-task") as HTMLButtonElement;
 export const tasksList = document.getElementById("tasks") as HTMLDivElement;
+export const viewMoreDiv = document.getElementById("view-more-tasks") as HTMLDivElement;
 export const successMessageDiv = document.querySelector(".success-msg-div") as HTMLDivElement;
 
 const today = new Date().toISOString().split('T')[0];

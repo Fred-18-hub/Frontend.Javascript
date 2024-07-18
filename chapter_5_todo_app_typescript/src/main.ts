@@ -73,14 +73,6 @@ function closeFormDialog() {
     variableService.formDialog.close();
 }
 
-// Showing Form Dialog
-variableService.createTaskBtn.addEventListener("click", () => {
-    showFormDialog(actionType.create);
-});
-
-// Closing Form Dialog
-variableService.formDialog.addEventListener("click", closeFormDialog);
-
 // Create Task
 function addTask() {
     const taskTitle = document.getElementById("task-input-title") as HTMLInputElement;
@@ -109,11 +101,31 @@ function generateTasksList() {
     if (storageService.TaskLocalStorage.count() === 0) {
         variableService.tasksList.innerHTML = commonConstants.noTaskMessage;
     }
-    else {
+    else if (storageService.TaskLocalStorage.count() <= 5) {
         variableService.tasksList.innerHTML = storageService.TaskLocalStorage.getAllTasks().map(task => {
             return variableService.generateTask(task);
         })
+        .join("");
+    }
+    else {
+        const tasksContainer = document.querySelector(".tasks-container") as HTMLDivElement;
+
+        if (!tasksContainer.className.includes("details")) {
+            let htmlValue: string = "";
+            for (let i = 0; i < 5; i++) {
+                const task = storageService.TaskLocalStorage.getAllTasks()[i];
+                htmlValue += variableService.generateTask(task);
+            }
+
+            variableService.tasksList.innerHTML = htmlValue;
+            variableService.viewMoreDiv.removeAttribute("style");
+        }
+        else {
+            variableService.tasksList.innerHTML = storageService.TaskLocalStorage.getAllTasks().map(task => {
+                return variableService.generateTask(task);
+            })
             .join("");
+        }
     }
 
     // Delete task
@@ -231,3 +243,11 @@ setInterval(updateDateTime, 1000);
 
 // Generate Tasks
 generateTasksList();
+
+// Showing Form Dialog
+variableService.createTaskBtn?.addEventListener("click", () => {
+    showFormDialog(actionType.create);
+});
+
+// Closing Form Dialog
+variableService.formDialog?.addEventListener("click", closeFormDialog);
