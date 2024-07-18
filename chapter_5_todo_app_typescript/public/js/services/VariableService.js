@@ -17,6 +17,7 @@ export const dateTime = document.getElementById("date-time");
 export const formDialog = document.getElementById("form-dialog");
 export const createTaskBtn = document.getElementById("create-task");
 export const tasksList = document.getElementById("tasks");
+export const viewMoreDiv = document.getElementById("view-more-tasks");
 export const successMessageDiv = document.querySelector(".success-msg-div");
 const today = new Date().toISOString().split('T')[0];
 export const generateForm = (action) => {

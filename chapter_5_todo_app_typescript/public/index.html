@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <div class="container"> <!-- Main div for to do app-->
+    <!-- Main div for to do app-->
+    <div class="container">
         <div class="time-container"> <!-- Div for time part of app -->
             <img src="./assets/images/balls_light_glass_neon.jpg" alt="Balls-image">
             <div id="date-time">
@@ -23,15 +24,18 @@
             <button id="create-task" class="green-btn">Create Task</button>
 
             <div id="tasks"></div>
+
+            <div id="view-more-tasks" style="display: none;">
+                <a href="./detailed.html" style="text-decoration: none;">
+                    <button>View More</button>
+                </a>
+            </div>
         </div>
 
         <div class="success-msg-div"></div>
     </div>
 
     <!-- Scripts -->
-    <!-- <script type="" src="./js/services/CommonConstants.js"></script>
-    <script type="module" src="./js/services/StorageService.js"></script>
-    <script type="" src="./js/services/VariableService.js"></script> -->
     <script type="module" src="./js/main.js"></script>
 </body>
 

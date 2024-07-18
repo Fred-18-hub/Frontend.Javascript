@@ -241,6 +241,47 @@ body {
 }
 
 
+/* more tasks link */
+#view-more-tasks {
+    justify-content: center;
+    display: flex;
+    margin: 0.7rem 0 -0.7rem 0;
+}
+
+#view-more-tasks button {
+    background: rgb(99, 99, 99);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-style: italic;
+    transition: 0.2s background;
+}
+
+#view-more-tasks button:hover {
+    background: var(--secondary-txt-clr);
+}
+
+/* home link */
+#home-link {
+    display: flex;
+    position: relative;
+} 
+
+#home-link button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgb(3, 119, 228);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: 0.2s background;
+}
+
+#home-link button:hover {
+    background: rgb(2, 95, 182);
+}
+
+
 /* success message */
 .success-msg-div {
     display: block;
