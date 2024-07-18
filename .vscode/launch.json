@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
             "type": "msedge",
             "request": "launch",
@@ -16,6 +17,12 @@
             "request": "launch",
             "name": "Root",
             "file": "c:\\Antwi.Hubtel.Official\\Frontend.Javascript\\"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "To Do App Typescript",
+            "file": "c:\\Antwi.Hubtel.Official\\Frontend.Javascript\\chapter_5_todo_app_typescript\\public\\index.html"
         }
     ]
 }
