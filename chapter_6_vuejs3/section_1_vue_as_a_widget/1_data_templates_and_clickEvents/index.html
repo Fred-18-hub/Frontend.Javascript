@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1: Vue as a Widget</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h2>Data & Templates:</h2>
+
+    <div id="app">
+        <p>{{ title }} ({{ year }}) - {{ author }} - Sales: {{ sales }}</p>
+
+        <button v-on:click="sales+=10">Increase Sales</button>
+        <button v-on:click="sales-=10">Decrease Sales</button>
+        <div @click="changeTitle('12 Rules for Life')">Change book title</div>  <!-- @click is a shorthand for v-on:click -->
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

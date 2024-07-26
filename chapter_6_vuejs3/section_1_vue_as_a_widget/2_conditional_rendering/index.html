@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1: Vue as a Widget</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <h2>Conditional Rendering:</h2>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <p>{{ title }} ({{ year }}) - {{ author }} - Sales: {{ sales }}</p>
+
+            <button v-on:click="sales+=10">Increase Sales</button>
+            <button v-on:click="sales-=10">Decrease Sales</button>
+            <!-- @click is a shorthand for v-on:click -->
+            <div @click="changeTitle('12 Rules for Life')">Change book title</div>
+        </div>
+
+        <br>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+        <!-- v-show applies a display: none style to the element if the expression is false
+             but v-if removes the element from the DOM entirely -->
+        <p v-show="showBooks">Showing books</p>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
