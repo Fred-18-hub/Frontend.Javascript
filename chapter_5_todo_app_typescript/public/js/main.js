@@ -1,8 +1,6 @@
 import * as variableService from "./services/VariableService.js";
 import * as storageService from "./services/StorageService.js";
 import * as commonConstants from "./services/CommonConstants.js";
-const actionType = new commonConstants.ActionType();
-const successMessages = new commonConstants.SuccessMessage();
 // Handling Showing Date & Time
 function updateDateTime() {
     const now = new Date();
@@ -33,13 +31,13 @@ function showFormDialog(action, taskId) {
     taskForm.addEventListener("click", (e) => {
         e.stopPropagation();
     });
-    if (taskForm.className === actionType.create[0]) {
+    if (taskForm.className === commonConstants.ActionType.create[0]) {
         taskForm.addEventListener("submit", (e) => {
             e.preventDefault();
             addTask();
         });
     }
-    else if (taskForm.className === actionType.edit[0]) {
+    else if (taskForm.className === commonConstants.ActionType.edit[0]) {
         editTask(taskId);
     }
     const taskTitle = document.getElementById("task-input-title");
@@ -71,7 +69,7 @@ function addTask() {
     taskDate.value = "";
     closeFormDialog();
     generateTasksList();
-    showSuccessMessage(successMessages.taskCreatedMessage);
+    showSuccessMessage(commonConstants.SuccessMessage.taskCreatedMessage);
 }
 // Generating tasks list
 function generateTasksList() {
@@ -123,7 +121,7 @@ function generateTasksList() {
     for (const editTaskBtn of editTaskBtns) {
         editTaskBtn.addEventListener("click", () => {
             const id = Number(editTaskBtn.id.split('-')[2]);
-            showFormDialog(actionType.edit, id);
+            showFormDialog(commonConstants.ActionType.edit, id);
         });
     }
 }
@@ -131,7 +129,7 @@ function generateTasksList() {
 function deleteTask(id) {
     storageService.TaskLocalStorage.deleteTask(id);
     generateTasksList();
-    showSuccessMessage(successMessages.taskDeletedMessage);
+    showSuccessMessage(commonConstants.SuccessMessage.taskDeletedMessage);
 }
 // Checking task
 function checkTask(id) {
@@ -156,7 +154,7 @@ function editTask(id) {
         storageService.TaskLocalStorage.saveChanges();
         closeFormDialog();
         generateTasksList();
-        showSuccessMessage(successMessages.taskEditedMessage);
+        showSuccessMessage(commonConstants.SuccessMessage.taskEditedMessage);
     });
 }
 // Validating task
@@ -190,7 +188,7 @@ setInterval(updateDateTime, 1000);
 generateTasksList();
 // Showing Form Dialog
 variableService.createTaskBtn?.addEventListener("click", () => {
-    showFormDialog(actionType.create);
+    showFormDialog(commonConstants.ActionType.create);
 });
 // Closing Form Dialog
 variableService.formDialog?.addEventListener("click", closeFormDialog);

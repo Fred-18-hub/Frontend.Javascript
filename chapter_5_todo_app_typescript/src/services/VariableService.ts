@@ -26,7 +26,7 @@ export const successMessageDiv = document.querySelector(".success-msg-div") as H
 
 const today = new Date().toISOString().split('T')[0];
 
-export const generateForm = (action: [string, string]) => {
+export const generateForm = (action: string[]) => {
 
     return `<form id="task-form" class="${action[0]}">
                     <p>${action[1]} Task</p>
