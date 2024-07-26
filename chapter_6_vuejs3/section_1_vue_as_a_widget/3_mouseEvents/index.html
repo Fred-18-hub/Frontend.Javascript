@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1: Vue as a Widget</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .box {
+            padding: 100px, 0;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            background: lightblue;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Mouse Events:</h2>
+
+    <div id="app">
+        <!-- Event object is passed as an argument to the event handler function -->
+        <div class="box" @mouseover="handleEvent">mouse over (enter)</div>
+        <!-- Explicitly passing the event object as an argument to the event handler function -->
+        <div class="box" @mouseleave="handleEvent($event, 'hi mouse leave')">mouse leave</div>
+        <div class="box" @dblclick="handleEvent">double click</div>
+        <div class="box" @mousemove="handleMouseMove">
+            <p>mouse</p>
+            <span>X: {{ x }} Y: {{ y }}</span>
+        </div>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
