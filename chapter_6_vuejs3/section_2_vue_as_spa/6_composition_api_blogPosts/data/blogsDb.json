@@ -1,0 +1,24 @@
+{
+    "blogPosts": [
+        {
+            "id": 1,
+            "title": "welcome to the blog",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt autem mollitia ipsum alias similique iste, pariatur modi minus eum est, iure, iusto quas odit minima error rerum laborum nobis officia? Ducimus ex ipsa provident nulla aliquam, vero velit! Earum eligendi autem voluptas aut molestias delectus molestiae nihil iure odio, repellendus error, libero quae? Hic quae aut, optio atque totam eveniet, cupiditate assumenda impedit cum, saepe quo? Deserunt fugiat et quidem soluta asperiores repellendus quam eos recusandae dolores harum error adipisci laborum porro neque voluptatibus sequi eius ullam reprehenderit, aliquid in. Iusto, deserunt? Exercitationem facilis vel veritatis quis architecto soluta qui modi earum eum eaque iste possimus necessitatibus blanditiis, nesciunt labore magni at tempora nam vero autem. Consectetur harum iure odio et, excepturi laudantium, cupiditate minus ut ab laborum autem! Libero architecto incidunt molestiae veritatis ipsam ducimus? Minus delectus, exercitationem velit inventore est officiis corporis vel, veniam doloremque et ab magni. Cumque adipisci suscipit odit nesciunt. Odio laboriosam sunt quidem temporibus nisi dolore placeat iste adipisci repellendus ab, provident, doloremque fugit. Quis aperiam deleniti officia eos harum. Explicabo nulla dolore quidem, exercitationem fuga, ducimus debitis illo rerum ipsum asperiores commodi. Quidem maxime omnis sint eligendi officiis dolorem doloremque neque praesentium.",
+            "tags": [
+                "webdev",
+                "coding",
+                "news"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "top 5 css tips",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt autem mollitia ipsum alias similique iste, pariatur modi minus eum est, iure, iusto quas odit minima error rerum laborum nobis officia? Ducimus ex ipsa provident nulla aliquam, vero velit! Earum eligendi autem voluptas aut molestias delectus molestiae nihil iure odio, repellendus error, libero quae? Hic quae aut, optio atque totam eveniet, cupiditate assumenda impedit cum, saepe quo? Deserunt fugiat et quidem soluta asperiores repellendus quam eos recusandae dolores harum error adipisci laborum porro neque voluptatibus sequi eius ullam reprehenderit, aliquid in. Iusto, deserunt? Exercitationem facilis vel veritatis quis architecto soluta qui modi earum eum eaque iste possimus necessitatibus blanditiis, nesciunt labore magni at tempora nam vero autem. Consectetur harum iure odio et, excepturi laudantium, cupiditate minus ut ab laborum autem! Libero architecto incidunt molestiae veritatis ipsam ducimus? Minus delectus, exercitationem velit inventore est officiis corporis vel, veniam doloremque et ab magni. Cumque adipisci suscipit odit nesciunt. Odio laboriosam sunt quidem temporibus nisi dolore placeat iste adipisci repellendus ab, provident, doloremque fugit. Quis aperiam deleniti officia eos harum. Explicabo nulla dolore quidem, exercitationem fuga, ducimus debitis illo rerum ipsum asperiores commodi. Quidem maxime omnis sint eligendi officiis dolorem doloremque neque praesentium.",
+            "tags": [
+                "css",
+                "webdev",
+                "coding"
+            ]
+        }
+    ]
+}
