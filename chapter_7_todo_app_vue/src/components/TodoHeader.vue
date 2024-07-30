@@ -28,7 +28,8 @@
                 gap: 8px;
 
                 img {
-                    max-width: 50px;
+                    max-width: 70px;
+                    border-radius: 20px;
                 }
 
                 h1 {
